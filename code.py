@@ -28,7 +28,7 @@ class Wave:
     def r(self, rag):
         s = 0
         for i in range(self.N):
-            s = s + self.p[i]*self.p[(i+rag)%self.N]
+            s = s + self.p[i]*self.p[(i-rag)%self.N]
             
         return s/self.N
     
